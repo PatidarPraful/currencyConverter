@@ -32,6 +32,16 @@ function App() {
         }}
     >
         <div className="w-full">
+        <h1
+                className="text-center m-4 font-bold"
+                style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Arial, sans-serif',
+                    fontSize: '2.3rem', 
+                }}
+            >
+                Currency Converter
+            </h1>
             <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                 <form
                     onSubmit={(e) => {
@@ -45,7 +55,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setFrom(currency)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
@@ -65,7 +75,7 @@ function App() {
                             amount={convertedAmount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+                            selectCurrency={to}
                             amountDisable
                         />
                     </div>
